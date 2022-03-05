@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.TreasureHunt", "T02.TreasureHunt\T02.TreasureHunt.csproj", "{1E211015-4226-4AB9-B565-B087339F96EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.ManOWar", "T03.ManOWar\T03.ManOWar.csproj", "{CA1086E2-81BC-4916-A1B4-46C43C660A52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E211015-4226-4AB9-B565-B087339F96EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E211015-4226-4AB9-B565-B087339F96EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E211015-4226-4AB9-B565-B087339F96EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E211015-4226-4AB9-B565-B087339F96EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1086E2-81BC-4916-A1B4-46C43C660A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1086E2-81BC-4916-A1B4-46C43C660A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1086E2-81BC-4916-A1B4-46C43C660A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1086E2-81BC-4916-A1B4-46C43C660A52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A1C762C-38DF-4785-9273-830B38B11C97}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "t01GuineaPig", "t01GuineaPig\t01GuineaPig.csproj", "{F99428BF-60ED-46B5-B2BA-43DE04152618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.ShoppingList", "T02.ShoppingList\T02.ShoppingList.csproj", "{9DEC63A4-8D8D-4D6F-B764-1C8B79575586}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F99428BF-60ED-46B5-B2BA-43DE04152618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99428BF-60ED-46B5-B2BA-43DE04152618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99428BF-60ED-46B5-B2BA-43DE04152618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99428BF-60ED-46B5-B2BA-43DE04152618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEC63A4-8D8D-4D6F-B764-1C8B79575586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEC63A4-8D8D-4D6F-B764-1C8B79575586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEC63A4-8D8D-4D6F-B764-1C8B79575586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEC63A4-8D8D-4D6F-B764-1C8B79575586}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDE41AC8-9CC0-4E08-AB08-F3BF4E2A87BF}
+	EndGlobalSection
+EndGlobal

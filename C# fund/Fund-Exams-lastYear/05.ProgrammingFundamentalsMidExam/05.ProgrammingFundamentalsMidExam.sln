@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.BonusScoringSystem", "T01.BonusScoringSystem\T01.BonusScoringSystem.csproj", "{604086D0-D23E-4164-8721-9BB84B0DD2DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.Inventory", "T03.Inventory\T03.Inventory.csproj", "{07B41A65-2E9C-4745-85CB-B09F9F41862A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{604086D0-D23E-4164-8721-9BB84B0DD2DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604086D0-D23E-4164-8721-9BB84B0DD2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604086D0-D23E-4164-8721-9BB84B0DD2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604086D0-D23E-4164-8721-9BB84B0DD2DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B41A65-2E9C-4745-85CB-B09F9F41862A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B41A65-2E9C-4745-85CB-B09F9F41862A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B41A65-2E9C-4745-85CB-B09F9F41862A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B41A65-2E9C-4745-85CB-B09F9F41862A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8CBA340-073C-4214-8ACC-120F7B7A2E01}
+	EndGlobalSection
+EndGlobal
