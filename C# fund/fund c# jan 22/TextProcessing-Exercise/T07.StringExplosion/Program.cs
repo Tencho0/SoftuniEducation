@@ -1,20 +1,24 @@
 ﻿using System;
-using System.Text;
 
-namespace T06.ReplaceRepeatingChars
+namespace T07.StringExplosion
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            for (int i = 0; i < input.Length - 1; i++)
+            int strength = 0;
+            for (int i = 0; i < input.Length; i++)
             {
-                char currLetter = input[i];
-                if (currLetter == input[i+1])
+                if (strength > 0 && input[i] != '>')
                 {
                     input = input.Remove(i, 1);
+                    strength--;
                     i--;
+                }
+                else if (input[i] == '>')
+                {
+                    strength += int.Parse(input[i + 1].ToString());
                 }
             }
             Console.WriteLine(input);
