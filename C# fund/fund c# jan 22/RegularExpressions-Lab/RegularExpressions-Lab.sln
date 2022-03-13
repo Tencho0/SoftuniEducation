@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.MatchFullName", "T01.MatchFullName\T01.MatchFullName.csproj", "{4F6D5BF1-9658-484F-A3A5-1B89824D71C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01.MatchFullName", "T01.MatchFullName\T01.MatchFullName.csproj", "{4F6D5BF1-9658-484F-A3A5-1B89824D71C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDemos", "MyDemos\MyDemos.csproj", "{31F6E647-06DA-480A-9416-E4561A8CF75E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDemos", "MyDemos\MyDemos.csproj", "{31F6E647-06DA-480A-9416-E4561A8CF75E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.MatchPhoneNumber", "T02.MatchPhoneNumber\T02.MatchPhoneNumber.csproj", "{AE155A21-A8FE-4360-BF00-C78991D872F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02.MatchPhoneNumber", "T02.MatchPhoneNumber\T02.MatchPhoneNumber.csproj", "{AE155A21-A8FE-4360-BF00-C78991D872F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.MatchDates", "T03.MatchDates\T03.MatchDates.csproj", "{9FE8A3A0-9E9F-423E-A5B9-BBF1BED3846A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.MatchDates", "T03.MatchDates\T03.MatchDates.csproj", "{9FE8A3A0-9E9F-423E-A5B9-BBF1BED3846A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImotBG", "ImotBG\ImotBG.csproj", "{42C7EFB7-6DEB-4117-9036-117B02237CFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9FE8A3A0-9E9F-423E-A5B9-BBF1BED3846A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FE8A3A0-9E9F-423E-A5B9-BBF1BED3846A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FE8A3A0-9E9F-423E-A5B9-BBF1BED3846A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C7EFB7-6DEB-4117-9036-117B02237CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C7EFB7-6DEB-4117-9036-117B02237CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C7EFB7-6DEB-4117-9036-117B02237CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C7EFB7-6DEB-4117-9036-117B02237CFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
