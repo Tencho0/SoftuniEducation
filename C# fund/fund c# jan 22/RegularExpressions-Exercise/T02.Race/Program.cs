@@ -9,20 +9,20 @@ namespace T02.Race
     {
         static void Main(string[] args)
         {
-            var patternForName =new Regex(@"(?<name>[A-za-z]+)");
-            var patternForDigits =new Regex(@"(?<distance>\d+)");
-            var sumOfDigits = 0;
-            var participants = new Dictionary<string, int>();
-            var names = Console.ReadLine()
+            Regex patternForName =new Regex(@"(?<name>[A-Za-z]+)");
+            string patternForDigits = @"(?<distance>\d+)";
+            int sumOfDigits = 0;
+            Dictionary<string,int> participants = new Dictionary<string, int>();
+            List<string> names = Console.ReadLine()
                 .Split(", ", StringSplitOptions.RemoveEmptyEntries)
                 .ToList();
-            var input = Console.ReadLine();
+            string input = Console.ReadLine();
             while (input != "end of race")
             {
                 MatchCollection matchedNames = patternForName.Matches(input);
-                MatchCollection matchedDigits = patternForDigits.Matches(input);
-                var currName = string.Join("", matchedNames);
-                var currDigit = string.Join("", matchedDigits);
+                MatchCollection matchedDigits = Regex.Matches(input, patternForDigits);
+                string currName = string.Join("", matchedNames);
+                string currDigit = string.Join("", matchedDigits);
                 sumOfDigits = 0;
                 for (int i = 0; i < currDigit.Length; i++)
                 {
