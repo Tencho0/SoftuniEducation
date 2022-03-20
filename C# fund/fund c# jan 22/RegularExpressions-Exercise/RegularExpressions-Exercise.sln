@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.SoftUniBarIncome", "T03
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04.StarEnigma", "T04.StarEnigma\T04.StarEnigma.csproj", "{CF2B7D2E-F1AC-48FF-9576-9D80E18902DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05.NetherRealms", "T05.NetherRealms\T05.NetherRealms.csproj", "{611F5A36-4D4E-4F32-9F07-7F766D123CDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05.NetherRealms", "T05.NetherRealms\T05.NetherRealms.csproj", "{611F5A36-4D4E-4F32-9F07-7F766D123CDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06.ExtractEmails", "T06.ExtractEmails\T06.ExtractEmails.csproj", "{52F70547-7F14-44FF-82F4-5D7715E11373}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{611F5A36-4D4E-4F32-9F07-7F766D123CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611F5A36-4D4E-4F32-9F07-7F766D123CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611F5A36-4D4E-4F32-9F07-7F766D123CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F70547-7F14-44FF-82F4-5D7715E11373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F70547-7F14-44FF-82F4-5D7715E11373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F70547-7F14-44FF-82F4-5D7715E11373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F70547-7F14-44FF-82F4-5D7715E11373}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
