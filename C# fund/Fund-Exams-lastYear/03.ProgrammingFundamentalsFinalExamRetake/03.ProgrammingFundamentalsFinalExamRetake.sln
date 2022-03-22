@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01.SecretChat", "T01.SecretChat\T01.SecretChat.csproj", "{7BE81D95-1FB8-4540-92BA-A46D9C848232}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.MirrorWords", "T02.MirrorWords\T02.MirrorWords.csproj", "{69BED71C-1027-4B7B-8FDE-3AD3283C6157}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BE81D95-1FB8-4540-92BA-A46D9C848232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE81D95-1FB8-4540-92BA-A46D9C848232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE81D95-1FB8-4540-92BA-A46D9C848232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE81D95-1FB8-4540-92BA-A46D9C848232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BED71C-1027-4B7B-8FDE-3AD3283C6157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BED71C-1027-4B7B-8FDE-3AD3283C6157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BED71C-1027-4B7B-8FDE-3AD3283C6157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BED71C-1027-4B7B-8FDE-3AD3283C6157}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {699F0D05-7D83-4AE8-9DD1-9F4F11517BE9}
+	EndGlobalSection
+EndGlobal
