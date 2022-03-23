@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04.ProgrammingFundamentalsFinalExam", "T04.ProgrammingFundamentalsFinalExam\T04.ProgrammingFundamentalsFinalExam.csproj", "{F57084F3-D934-42E4-BAA5-01B980355DF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Password Reset", "T04.ProgrammingFundamentalsFinalExam\T01. Password Reset.csproj", "{F57084F3-D934-42E4-BAA5-01B980355DF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.HeroesofCodeandLogicVII", "T03.HeroesofCodeandLogicVII\T03.HeroesofCodeandLogicVII.csproj", "{E641B9F2-D34C-4A78-B154-460B781D4F45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.HeroesofCodeandLogicVII", "T03.HeroesofCodeandLogicVII\T03.HeroesofCodeandLogicVII.csproj", "{E641B9F2-D34C-4A78-B154-460B781D4F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.FancyBarcodes", "T02.FancyBarcodes\T02.FancyBarcodes.csproj", "{05B0366D-A02F-4BDB-B735-1C34F8FF18B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E641B9F2-D34C-4A78-B154-460B781D4F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E641B9F2-D34C-4A78-B154-460B781D4F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E641B9F2-D34C-4A78-B154-460B781D4F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B0366D-A02F-4BDB-B735-1C34F8FF18B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B0366D-A02F-4BDB-B735-1C34F8FF18B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B0366D-A02F-4BDB-B735-1C34F8FF18B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B0366D-A02F-4BDB-B735-1C34F8FF18B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

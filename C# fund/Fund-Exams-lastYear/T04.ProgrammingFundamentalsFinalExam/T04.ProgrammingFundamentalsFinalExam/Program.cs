@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace T04.ProgrammingFundamentalsFinalExam
+namespace T01.PasswordReset
 {
     internal class Program
     {
