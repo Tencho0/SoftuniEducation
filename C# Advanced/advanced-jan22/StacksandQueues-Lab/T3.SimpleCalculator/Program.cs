@@ -7,6 +7,7 @@ namespace T3.SimpleCalculator
     {
         static void Main(string[] args)
         {
+            Stack<string> stack = new Stack<string>();
 
         }
     }
