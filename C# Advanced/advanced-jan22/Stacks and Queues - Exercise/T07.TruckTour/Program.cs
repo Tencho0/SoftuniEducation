@@ -15,12 +15,29 @@ namespace T07.TruckTour
                 long[] pumps = Console.ReadLine().Split().Select(long.Parse).ToArray();
                 queue.Enqueue(pumps);
             }
+            int startIndex = 0;
             while (true)
             {
-                long[] curr = queue.Peek();
-                if ()
+                bool isComplete = true;
+                long totalLiters = 0;
+                foreach (var item in queue)
                 {
-
+                    long fuel = item[0];
+                    long distance = item[1];
+                    totalLiters += fuel;
+                    if (totalLiters - distance < 0)
+                    {
+                        startIndex++;
+                        queue.Enqueue(queue.Dequeue());
+                        isComplete = false;
+                        break;
+                    }
+                    totalLiters -= distance;
+                }
+                if (isComplete)
+                {
+                    Console.WriteLine(startIndex);
+                    break;
                 }
             }
         }

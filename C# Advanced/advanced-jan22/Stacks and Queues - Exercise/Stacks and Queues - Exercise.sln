@@ -7,13 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01.BasicStackOperations", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02.BasicQueueOperations", "T02.BasicQueueOperations\T02.BasicQueueOperations.csproj", "{DE1C7F50-6DE4-46C5-B68D-7726EF010EA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.MaximumandMinimumElement", "T03.MaximumandMinimumElement\T03.MaximumandMinimumElement.csproj", "{758273CC-1D2F-4202-97CE-C20D6B97A2B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.MaximumandMinimumElement", "T03.MaximumandMinimumElement\T03.MaximumandMinimumElement.csproj", "{758273CC-1D2F-4202-97CE-C20D6B97A2B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04.FastFood", "T04.FastFood\T04.FastFood.csproj", "{9A8B689B-2991-4292-8437-C0B827721E5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04.FastFood", "T04.FastFood\T04.FastFood.csproj", "{9A8B689B-2991-4292-8437-C0B827721E5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05FashionBoutique", "T05FashionBoutique\T05FashionBoutique.csproj", "{7C07C22F-8C5C-49D8-B7ED-6BBAF22A8A75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05FashionBoutique", "T05FashionBoutique\T05FashionBoutique.csproj", "{7C07C22F-8C5C-49D8-B7ED-6BBAF22A8A75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07.TruckTour", "T07.TruckTour\T07.TruckTour.csproj", "{D2B661CB-6709-49B3-B1B0-C11462525CCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T07.TruckTour", "T07.TruckTour\T07.TruckTour.csproj", "{D2B661CB-6709-49B3-B1B0-C11462525CCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08.BalancedParenthesis", "T08.BalancedParenthesis\T08.BalancedParenthesis.csproj", "{70A70335-F416-48B6-8353-727CC7D1167C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T10.Crossroads", "T10.Crossroads\T10.Crossroads.csproj", "{820362AA-1CD7-47DF-ACAE-481890BF0E99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{D2B661CB-6709-49B3-B1B0-C11462525CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2B661CB-6709-49B3-B1B0-C11462525CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2B661CB-6709-49B3-B1B0-C11462525CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70A70335-F416-48B6-8353-727CC7D1167C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A70335-F416-48B6-8353-727CC7D1167C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A70335-F416-48B6-8353-727CC7D1167C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A70335-F416-48B6-8353-727CC7D1167C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{820362AA-1CD7-47DF-ACAE-481890BF0E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{820362AA-1CD7-47DF-ACAE-481890BF0E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{820362AA-1CD7-47DF-ACAE-481890BF0E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{820362AA-1CD7-47DF-ACAE-481890BF0E99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
