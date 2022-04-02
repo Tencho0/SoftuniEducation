@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace T10.RadioactiveMutantVampireBunnies
@@ -11,6 +12,7 @@ namespace T10.RadioactiveMutantVampireBunnies
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
+
             int n = givenSize[0];
             int m = givenSize[1];
 
@@ -24,105 +26,119 @@ namespace T10.RadioactiveMutantVampireBunnies
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
                     matrix[row, col] = input[col];
-                    if (input[col] == 'P')
+                    if (matrix[row, col] == 'P')
                     {
                         playerRow = row;
                         playerCol = col;
                     }
                 }
             }
-            int deathRow = 0;
-            int deathCol = 0;
+
+            bool hasWon = false;
+            bool isDead = false;
+
             string commands = Console.ReadLine();
+
             foreach (var currLetter in commands)
             {
-                int oldRow = playerRow;
-                int oldCol = playerCol;
-
-                matrix[oldRow, oldCol] = '.';
+                int nextRow = 0;
+                int nextCol = 0;
 
                 if (currLetter == 'L')
                 {
-                    playerCol--;
+                    nextCol = -1;
                 }
                 else if (currLetter == 'R')
                 {
-                    playerCol++;
+                    nextCol = 1;
                 }
                 else if (currLetter == 'U')
                 {
-                    playerRow--;
+                    nextRow = -1;
                 }
                 else if (currLetter == 'D')
                 {
-                    playerRow++;
-                }
-                if (playerRow <= 0 || playerCol <= 0)
-                {
-                    playerRow = oldRow;
-                    playerCol = oldCol;
-                }
-                if (matrix[playerRow, playerCol] == 'B')
-                {
-                    deathRow = playerRow;
-                    deathCol = playerCol;
+                    nextRow = 1;
                 }
 
-                for (int row = 0; row < matrix.GetLength(0); row++)
+                matrix[playerRow, playerCol] = '.';
+
+                if (!IsIndicesValid(matrix, playerRow + nextRow, playerCol + nextCol))
                 {
-                    for (int col = 0; col < matrix.GetLength(1); col++)
-                    {
-                        if (matrix[row, col] == 'B')
-                        {
-                            if (IsIndicesValid(matrix, row - 1, col))
-                            {
-                                if (matrix[row - 1, col] == 'P')
-                                {
-                                    deathRow = row - 1;
-                                    deathCol = col;
-                                }
-                                matrix[row - 1, col] = 'B';
-                            }
-                            if (IsIndicesValid(matrix, row + 1, col))
-                            {
-                                if (matrix[row + 1, col] == 'P')
-                                {
-                                    deathRow = row + 1;
-                                    deathCol = col;
-                                }
-                                matrix[row + 1, col] = 'B';
-                            }
-                            if (IsIndicesValid(matrix, row, col - 1))
-                            {
-                                if (matrix[row, col - 1] == 'P')
-                                {
-                                    deathRow = row;
-                                    deathCol = col - 1;
-                                }
-                                matrix[row, col - 1] = 'B';
-                            }
-                            if (IsIndicesValid(matrix, row, col + 1))
-                            {
-                                if (matrix[row, col + 1] == 'P')
-                                {
-                                    deathRow = row;
-                                    deathCol = col + 1;
-                                }
-                                matrix[row, col + 1] = 'B';
-                            }
-                        }
-                    }
+                    hasWon = true;
+                }
+                else
+                {
+                    playerRow += nextRow;
+                    playerCol += nextCol;
+                }
+
+                if (matrix[playerRow, playerCol] == 'B')
+                {
+                    isDead = true;
+                }
+                else if (!hasWon)
+                {
+                    matrix[playerRow, playerCol] = 'P';
+                }
+
+                List<int[]> bunnies = ReturnBunniesIndices(matrix);
+
+                foreach (var bunny in bunnies)
+                {
+                    int bunnyRow = bunny[0];
+                    int bunnyCol = bunny[1];
+
+                    //Up
+                    CheckForPossition(matrix, bunnyRow - 1, bunnyCol, ref isDead);
+                    //Down
+                    CheckForPossition(matrix, bunnyRow + 1, bunnyCol, ref isDead);
+                    //Left
+                    CheckForPossition(matrix, bunnyRow, bunnyCol - 1, ref isDead);
+                    //Right
+                    CheckForPossition(matrix, bunnyRow, bunnyCol + 1, ref isDead);
+                }
+
+                if (hasWon)
+                {
+                    PrintTheMatrix(matrix);
+                    Console.WriteLine($"won: {playerRow} {playerCol}");
+                    break;
+                }
+                if (isDead)
+                {
+                    PrintTheMatrix(matrix);
+                    Console.WriteLine($"dead: {playerRow} {playerCol}");
+                    break;
                 }
             }
+
+        }
+        private static List<int[]> ReturnBunniesIndices(char[,] matrix)
+        {
+            List<int[]> bunnies = new List<int[]>();
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    Console.Write($"{matrix[row,col]} ");
+                    if (matrix[row, col] == 'B')
+                    {
+                        bunnies.Add(new int[] { row, col });
+                    }
                 }
-                Console.WriteLine();
             }
-            Console.WriteLine($"win {playerRow} {playerCol}");
+            return bunnies;
+        }
+        private static void CheckForPossition(char[,] matrix, int bunnyRow, int bunnyCol, ref bool isDead)
+        {
+            if (IsIndicesValid(matrix, bunnyRow, bunnyCol))
+            {
+                if (matrix[bunnyRow, bunnyCol] == 'P')
+                {
+                    isDead = true;
+                }
+                matrix[bunnyRow, bunnyCol] = 'B';
+            }
         }
         private static bool IsIndicesValid(char[,] matrix, int row, int col)
         {
@@ -131,10 +147,58 @@ namespace T10.RadioactiveMutantVampireBunnies
                 && row < matrix.GetLength(0)
                 && col < matrix.GetLength(1);
         }
+        private static void PrintTheMatrix(char[,] matrix)
+        {
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    Console.Write($"{matrix[row, col]}");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
 
 
+
+//if (IsIndicesValid(matrix, row - 1, col))
+//{
+//    if (matrix[row - 1, col] == 'P')
+//    {
+//        deathRow = row - 1;
+//        deathCol = col;
+//    }
+//    matrix[row - 1, col] = 'B';
+//}
+//if (IsIndicesValid(matrix, row + 1, col))
+//{
+//    if (matrix[row + 1, col] == 'P')
+//    {
+//        deathRow = row + 1;
+//        deathCol = col;
+//    }
+//    matrix[row + 1, col] = 'B';
+//}
+//if (IsIndicesValid(matrix, row, col - 1))
+//{
+//    if (matrix[row, col - 1] == 'P')
+//    {
+//        deathRow = row;
+//        deathCol = col - 1;
+//    }
+//    matrix[row, col - 1] = 'B';
+//}
+//if (IsIndicesValid(matrix, row, col + 1))
+//{
+//    if (matrix[row, col + 1] == 'P')
+//    {
+//        deathRow = row;
+//        deathCol = col + 1;
+//    }
+//    matrix[row, col + 1] = 'B';
+//}
 
 
 
