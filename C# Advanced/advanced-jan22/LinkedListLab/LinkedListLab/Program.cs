@@ -12,24 +12,28 @@ namespace LinkedListLab
             doublyLinkedList.AddFirst(new Node(1));
             doublyLinkedList.AddFirst(new Node(2));
             doublyLinkedList.AddFirst(new Node(3));
+            doublyLinkedList.AddFirst(new Node(4));
 
-            doublyLinkedList.AddLast(new Node(1));
-            doublyLinkedList.AddLast(new Node(2));
-            doublyLinkedList.AddLast(new Node(3));
-
-            Console.WriteLine($"Removed First: {doublyLinkedList.RemoveFirst().Value}");
-            Console.WriteLine($"Removed First: {doublyLinkedList.RemoveFirst().Value}");
-
-            Console.WriteLine($"Removed Last: {doublyLinkedList.RemoveLast().Value}");
-            Console.WriteLine($"Removed Last: {doublyLinkedList.RemoveLast().Value}");
-
-            Node node = doublyLinkedList.Head;
-
-            while (node != null)
+            doublyLinkedList.ForEach(node =>
             {
+               // Console.WriteLine("In action: ");
                 Console.WriteLine(node.Value);
-                node = node.Next;
-            }
+            });
+            Console.WriteLine("Reversed");
+            doublyLinkedList.Reverse();
+            doublyLinkedList.ForEach(node =>
+            {
+               // Console.WriteLine("In action: ");
+                Console.WriteLine(node.Value);
+            });
+
+            Console.WriteLine("Reversed");
+            doublyLinkedList.Reverse();
+            doublyLinkedList.ForEach(node =>
+            {
+               // Console.WriteLine("In action: ");
+                Console.WriteLine(node.Value);
+            });
         }
     }
 }

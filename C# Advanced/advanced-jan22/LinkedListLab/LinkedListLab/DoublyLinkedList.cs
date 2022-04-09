@@ -6,15 +6,53 @@ namespace LinkedListLab
 {
     public class DoublyLinkedList
     {
+        private bool isReversed = false;
         public Node Head { get; set; }
         public Node Tail { get; set; }
+        public int Count { get; set; }
+        public void Reverse()
+        {
+            isReversed = !isReversed;
+        }
+        public void ForEach(Action<Node> action)
+        {
+            var node = Head;
+            if (isReversed)
+            {
+                node = Tail;
+            }
+            while (node != null)
+            {
+                action(node);
+                if (isReversed)
+                {
+                    node = node.Previous;
+                }
+                else
+                {
+                    node = node.Next;
+                }
+            }
+        }
+        public Node[] ToArray()
+        {
+            Node[] array = new Node[Count];
+            var node = Head;
+            int index = 0;
+            while (node != null)
+            {
+                array[index++] = node;
+                node = node.Next;
+            }
+            return array;
+        }
         public Node RemoveFirst()
         {
             if (Head == null)
             {
                 return null;
             }
-
+            Count--;
             var previous = Head;
             var next = Head.Next;
             if (next != null)
@@ -34,7 +72,7 @@ namespace LinkedListLab
             {
                 return null;
             }
-
+            Count--;
             var previous = Tail;
             var next = Tail.Previous;
             if (next != null)
@@ -50,6 +88,7 @@ namespace LinkedListLab
         }
         public void AddFirst(Node node)
         {
+            Count++;
             if (!ChekIfFirstElementInList(node))
             {
                 Node previousHead = Head;
@@ -60,6 +99,7 @@ namespace LinkedListLab
         }
         public void AddLast(Node node)
         {
+            Count++;
             if (!ChekIfFirstElementInList(node))
             {
                 Node previousTail = Tail;
