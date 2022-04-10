@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LinkedListLab
+namespace CustomDoublyLinkedList
 {
-    public class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+            CustomDoublyLinkedList<int> doublyLinkedList = new CustomDoublyLinkedList<int>();
 
-            doublyLinkedList.AddFirst(new Node(1));
-            doublyLinkedList.AddFirst(new Node(2));
-            doublyLinkedList.AddFirst(new Node(3));
-            doublyLinkedList.AddFirst(new Node(4));
+            doublyLinkedList.AddFirst(new Node<int>(1));
+            doublyLinkedList.AddFirst(new Node<int>(2));
+            doublyLinkedList.AddFirst(new Node<int>(3));
+            doublyLinkedList.AddFirst(new Node<int>(4));
 
             doublyLinkedList.ForEach(node =>
             {
