@@ -35,6 +35,10 @@ namespace T01.ListyIterator
                     {
                         list.Print();
                     }
+                    else if (command == "PrintAll")
+                    {
+                            Console.WriteLine(string.Join(" ", list));
+                    }
                     command = Console.ReadLine();
                 }
             }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace T02.Collection
+namespace T05.ComparingObjects
 {
     internal class Program
     {
