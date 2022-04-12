@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.ListyIterator", "T01.ListyIterator\T01.ListyIterator.csproj", "{C17E9F5A-FB52-4374-BFDE-90ADEC1845E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.Collection", "T02.Collection\T02.Collection.csproj", "{D7067ECC-9302-4390-B035-8CF39DBFEEF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C17E9F5A-FB52-4374-BFDE-90ADEC1845E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17E9F5A-FB52-4374-BFDE-90ADEC1845E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17E9F5A-FB52-4374-BFDE-90ADEC1845E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17E9F5A-FB52-4374-BFDE-90ADEC1845E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7067ECC-9302-4390-B035-8CF39DBFEEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7067ECC-9302-4390-B035-8CF39DBFEEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7067ECC-9302-4390-B035-8CF39DBFEEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7067ECC-9302-4390-B035-8CF39DBFEEF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {684E7820-913E-4E10-B960-7FDA040C3187}
+	EndGlobalSection
+EndGlobal
