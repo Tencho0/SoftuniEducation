@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace T02.MultipleInheritance
+namespace CustomStack
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
