@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.ClassBoxData", "T01.ClassBoxData\T01.ClassBoxData.csproj", "{E91DBA8D-EA60-4D12-8979-BB1D66DBDBC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalFarm", "AnimalFarm\AnimalFarm.csproj", "{46F2BD41-61A7-46A2-A94D-B7AB2C050A13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.ShoppingSpree", "T03.ShoppingSpree\T03.ShoppingSpree.csproj", "{86BB1C26-5422-4BC6-ACC8-CE778EBAD99D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E91DBA8D-EA60-4D12-8979-BB1D66DBDBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E91DBA8D-EA60-4D12-8979-BB1D66DBDBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E91DBA8D-EA60-4D12-8979-BB1D66DBDBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E91DBA8D-EA60-4D12-8979-BB1D66DBDBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F2BD41-61A7-46A2-A94D-B7AB2C050A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F2BD41-61A7-46A2-A94D-B7AB2C050A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F2BD41-61A7-46A2-A94D-B7AB2C050A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F2BD41-61A7-46A2-A94D-B7AB2C050A13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86BB1C26-5422-4BC6-ACC8-CE778EBAD99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BB1C26-5422-4BC6-ACC8-CE778EBAD99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BB1C26-5422-4BC6-ACC8-CE778EBAD99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BB1C26-5422-4BC6-ACC8-CE778EBAD99D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C493735-E96C-40B5-AD26-611ECE8CF364}
+	EndGlobalSection
+EndGlobal
