@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\T02.MultipleImplementation\T02.MultipleImplementation.csproj" />
+    <ProjectReference Include="..\T04.BorderControl\T04.BorderControl.csproj" />
+  </ItemGroup>
+
+</Project>
