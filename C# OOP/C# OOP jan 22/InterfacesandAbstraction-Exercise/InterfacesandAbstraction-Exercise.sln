@@ -9,17 +9,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02.MultipleImplementation"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.Telephony", "T03.Telephony\T03.Telephony.csproj", "{6D19BFD8-E3B7-4C50-881A-67A8E1D13EF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.Telephony2", "T03.Telephony2\T03.Telephony2.csproj", "{01A0BD7A-6E72-4C60-ADBD-C07C11805B72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.Telephony2", "T03.Telephony2\T03.Telephony2.csproj", "{01A0BD7A-6E72-4C60-ADBD-C07C11805B72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04.BorderControl", "T04.BorderControl\T04.BorderControl.csproj", "{EBF3DAC3-6E16-49EC-894C-087F3DF713BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04.BorderControl", "T04.BorderControl\T04.BorderControl.csproj", "{EBF3DAC3-6E16-49EC-894C-087F3DF713BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04.BorderControl2", "T04.BorderControl2\T04.BorderControl2.csproj", "{39EEE69F-6458-4C54-8D22-03AD5D57ED77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04.BorderControl2", "T04.BorderControl2\T04.BorderControl2.csproj", "{39EEE69F-6458-4C54-8D22-03AD5D57ED77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05.BirthdayCelebrations", "T05.BirthdayCelebrations\T05.BirthdayCelebrations.csproj", "{C0BFF749-3031-4B59-A9CA-BBBD22615762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05.BirthdayCelebrations", "T05.BirthdayCelebrations\T05.BirthdayCelebrations.csproj", "{C0BFF749-3031-4B59-A9CA-BBBD22615762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06.FoodShortage", "T06.FoodShortage\T06.FoodShortage.csproj", "{E19DC0EA-50FE-4B3B-910D-CC8220386B5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T06.FoodShortage", "T06.FoodShortage\T06.FoodShortage.csproj", "{E19DC0EA-50FE-4B3B-910D-CC8220386B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07.MilitaryElite", "T07.MilitaryElite\T07.MilitaryElite.csproj", "{B46E7BF2-52E4-4DAF-9821-4D152348D5F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T07.MilitaryElite", "T07.MilitaryElite\T07.MilitaryElite.csproj", "{B46E7BF2-52E4-4DAF-9821-4D152348D5F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfacesAndAbstraction", "InterfacesAndAbstraction\InterfacesAndAbstraction.csproj", "{35AB06DF-496E-45D6-BD08-279BCFF4CABA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{B46E7BF2-52E4-4DAF-9821-4D152348D5F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B46E7BF2-52E4-4DAF-9821-4D152348D5F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B46E7BF2-52E4-4DAF-9821-4D152348D5F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35AB06DF-496E-45D6-BD08-279BCFF4CABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35AB06DF-496E-45D6-BD08-279BCFF4CABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35AB06DF-496E-45D6-BD08-279BCFF4CABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35AB06DF-496E-45D6-BD08-279BCFF4CABA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

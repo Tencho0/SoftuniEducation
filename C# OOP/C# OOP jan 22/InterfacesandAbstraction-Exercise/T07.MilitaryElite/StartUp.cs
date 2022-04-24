@@ -1,12 +1,11 @@
-﻿using System;
-
-namespace T07.MilitaryElite
+﻿namespace MilitaryElite
 {
     public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Engine engine = new Engine();
+            engine.Run(); 
         }
     }
 }
