@@ -9,12 +9,12 @@ namespace T01.Vehicles
         public Truck(double fuelQuantity, double fuelConsumption) :
             base(fuelQuantity, fuelConsumption)
         {
-            this.FuelConsumption = fuelConsumption + 1.6;
         }
-        public override double FuelConsumption { get; set; }
+        public override double FuelConsumption => base.FuelConsumption + 1.6;
         public override void Refuel(double liters)
         {
-            this.FuelQuantity += (liters * 0.95);
+            liters *= 0.95;
+            base.Refuel(liters);
         }
     }
 }

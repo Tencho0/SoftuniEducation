@@ -17,7 +17,7 @@ namespace T01.Vehicles
         public virtual void Drive(double distance)
         {
             double neededFuel = distance * this.FuelConsumption;
-            if (neededFuel <= this.FuelQuantity)
+            if (CanDrive(neededFuel))
             {
                 this.FuelQuantity -= neededFuel;
                 Console.WriteLine($"{this.GetType().Name} travelled {distance} km");
@@ -28,6 +28,11 @@ namespace T01.Vehicles
         public virtual void Refuel(double liters)
         {
             this.FuelQuantity += liters;
+        }
+
+        private bool CanDrive(double neededFuel)
+        {
+            return neededFuel <= this.FuelQuantity;
         }
     }
 }
