@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace T04.WildFarm.Entities.Animals.Mammal
+namespace WildFarm
 {
     public abstract class Mammal : Animal, IMammal
     {
-        public Mammal(string name, double weight, int foodEaten, string livingRegion)
-            : base(name, weight, foodEaten)
+        public Mammal(string name, double weight, string livingRegion)
+            : base(name, weight)
         {
             this.LivingRegion = livingRegion;
         }

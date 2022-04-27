@@ -1,7 +1,7 @@
-﻿namespace T04.WildFarm.Entities.Foods
+﻿namespace WildFarm
 {
     public interface IFood
     {
-        public int Quantity { get; }
+        public int Quantity { get; set; }
     }
 }

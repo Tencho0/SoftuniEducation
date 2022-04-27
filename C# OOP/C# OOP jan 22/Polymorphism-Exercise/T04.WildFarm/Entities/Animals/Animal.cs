@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace T04.WildFarm.Entities.Animals
+﻿namespace WildFarm
 {
     public abstract class Animal : IAnimal
     {
-        public Animal(string name, double weight, int foodEaten)
+        public Animal(string name, double weight)
         {
             Name = name;
             Weight = weight;
-            FoodEaten = foodEaten;
         }
-        public string Name { get; set; }
-        public double Weight { get; set; }
-        public int FoodEaten { get; set; }
+        public string Name { get; }
+        public double Weight { get; protected set; }
+        public int FoodEaten { get; protected set; }
         public abstract void AskForFood();
+
+        public abstract void Eat(IFood food);
+        protected void BaseEat(double modifier, int quantity)
+        {
+            this.Weight += modifier * quantity;
+            this.FoodEaten += quantity;
+        }
     }
 }

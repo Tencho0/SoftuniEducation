@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace T04.WildFarm.Entities.Foods
+namespace WildFarm
 {
     public class Food : IFood
     {
@@ -10,7 +10,7 @@ namespace T04.WildFarm.Entities.Foods
         {
             this.Quantity = quantity;
         }
-        public int Quantity { get; }
+        public int Quantity { get; set; }
 
 
     }

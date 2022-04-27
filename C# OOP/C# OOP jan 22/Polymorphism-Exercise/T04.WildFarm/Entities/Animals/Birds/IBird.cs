@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace T04.WildFarm.Entities.Animals.Birds
+namespace WildFarm
 {
     public interface IBird
     {
