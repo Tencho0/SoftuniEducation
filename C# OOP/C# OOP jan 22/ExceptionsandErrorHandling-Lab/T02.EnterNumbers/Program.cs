@@ -1,31 +1,51 @@
 ﻿using System;
-using System.Collections.Generic;
-
 namespace T02.EnterNumbers
 {
-    internal class Program
+    class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            List<int> nums = new List<int>();
-            int n = 1;
-            while (nums.Count != 10)
+            int start = 1;
+            int end = 100;
+            int[] array = new int[10];
+            for (int i = 0; i < array.Length; i++)
             {
                 try
                 {
-                    ReadNumber(1, 100);
+                    array[i] = ReadNumber(start, end);
+
+                    if (array[i] <= start || array[i] > end)
+                    {
+                        throw new ArgumentOutOfRangeException();
+                    }
                 }
-                catch (Exception ex)
+                catch (FormatException exception)
                 {
-                    Console.WriteLine($"Your number is not in range {n} - 100!");
+                    Console.WriteLine("Invalid Number!");
+                    i--;
+                    continue;
                 }
-                n++;
+                catch (ArgumentOutOfRangeException exception2)
+                {
+                    Console.WriteLine($"Your number is not in range {start} - {end}!");
+                    i--;
+                    continue;
+                }
+
+                start = array[i];
             }
+
+            Console.WriteLine(string.Join(", ", array));
         }
-
-        public static void ReadNumber(int start, int end)
+        public static int ReadNumber(int start, int end)
         {
-
+            string number = Console.ReadLine();
+            int num;
+            if (!int.TryParse(number, out num))
+            {
+                throw new FormatException();
+            }
+            return num;
         }
     }
 }
