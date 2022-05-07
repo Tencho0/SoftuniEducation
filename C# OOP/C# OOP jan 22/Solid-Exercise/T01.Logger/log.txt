@@ -1,0 +1,60 @@
+<log>
+    <date>7.5.2022 г. 11:27:08</date>
+    <level>Error</level>
+    <message>Error parsing JSON.</message>
+</log>
+<log>
+    <date>7.5.2022 г. 11:27:08</date>
+    <level>Info</level>
+    <message>User Pesho successfully registered.</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:35:31</date>
+    <level>Info</level>
+    <message>Everything seems fine</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:35:31</date>
+    <level>Warning</level>
+    <message>Warning: ping is too high - disconnect imminent</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:35:31</date>
+    <level>Error</level>
+    <message>Error parsing request</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:35:31</date>
+    <level>Critical</level>
+    <message>No connection string found in App.config</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:35:31</date>
+    <level>Fatal</level>
+    <message>mscorlib.dll does not respond</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:36:45</date>
+    <level>Info</level>
+    <message>Everything seems fine</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:36:45</date>
+    <level>Warning</level>
+    <message>Warning: ping is too high - disconnect imminent</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:36:45</date>
+    <level>Error</level>
+    <message>Error parsing request</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:36:45</date>
+    <level>Critical</level>
+    <message>No connection string found in App.config</message>
+</log>
+<log>
+    <date>7.5.2022 г. 19:36:45</date>
+    <level>Fatal</level>
+    <message>mscorlib.dll does not respond</message>
+</log>
