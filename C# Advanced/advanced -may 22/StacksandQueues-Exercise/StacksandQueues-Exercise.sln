@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T08.BalancedParenthesis", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T10.Crossroads", "T10.Crossroads\T10.Crossroads.csproj", "{17E72EE7-EAA1-4F6B-907E-FA6BE8B75552}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T11.KeyRevolver", "T11.KeyRevolver\T11.KeyRevolver.csproj", "{7B6EDC19-A5E0-4E80-B2F3-E569EE2CDEA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T12.CupsandBottles", "T12.CupsandBottles\T12.CupsandBottles.csproj", "{12AC6BA3-92E3-473D-AC6B-238F8C1D9BA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{17E72EE7-EAA1-4F6B-907E-FA6BE8B75552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E72EE7-EAA1-4F6B-907E-FA6BE8B75552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E72EE7-EAA1-4F6B-907E-FA6BE8B75552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B6EDC19-A5E0-4E80-B2F3-E569EE2CDEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6EDC19-A5E0-4E80-B2F3-E569EE2CDEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6EDC19-A5E0-4E80-B2F3-E569EE2CDEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B6EDC19-A5E0-4E80-B2F3-E569EE2CDEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12AC6BA3-92E3-473D-AC6B-238F8C1D9BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12AC6BA3-92E3-473D-AC6B-238F8C1D9BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12AC6BA3-92E3-473D-AC6B-238F8C1D9BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12AC6BA3-92E3-473D-AC6B-238F8C1D9BA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
