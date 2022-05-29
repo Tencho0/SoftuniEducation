@@ -1,6 +1,5 @@
-﻿namespace MergeTextFiles
+﻿namespace MergeFiles
 {
-    using System;
     using System.IO;
 
     public class Program
@@ -19,7 +18,24 @@
         {
             StreamReader firstInputFile = new StreamReader(firstInputFilePath);
             StreamReader secondInputFile = new StreamReader(secondInputFilePath);
+            StreamWriter writer = new StreamWriter(outputFilePath);
+            using (writer)
+            {
+                while (true)
+                {
+                    string firstLine = firstInputFile.ReadLine();
+                    string secondLine = secondInputFile.ReadLine();
 
+                    if (firstLine != null)
+                        writer.WriteLine(firstLine);
+
+                    if (secondLine != null)
+                        writer.WriteLine(secondLine);
+
+                    if (firstLine == null && secondLine == null)
+                        break;
+                }
+            }
         }
     }
 
