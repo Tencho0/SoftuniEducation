@@ -9,6 +9,12 @@ namespace T07.RawData
         private string type;
         private int weight;
 
+        public Cargo(string type, int weight)
+        {
+            Type = type;
+            Weight = weight;
+        }
+
         public string Type
         {
             get { return type; }

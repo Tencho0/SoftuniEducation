@@ -9,6 +9,12 @@ namespace T07.RawData
         private int age;
         private double pressure;
 
+        public Tire(int age, double pressure)
+        {
+            Age = age;
+            Pressure = pressure;
+        }
+
         public int Age
         {
             get { return age; }
