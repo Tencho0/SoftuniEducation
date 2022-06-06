@@ -11,15 +11,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.CustomMinFunction", "T0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04.FindEvensorOdds", "T04.FindEvensorOdds\T04.FindEvensorOdds.csproj", "{11E8ED31-6D76-404E-A2AC-CE240E1AE5D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05.AppliedArithmetics", "T05.AppliedArithmetics\T05.AppliedArithmetics.csproj", "{561B4BE1-C44D-4F68-B571-7BC1A4368117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05.AppliedArithmetics", "T05.AppliedArithmetics\T05.AppliedArithmetics.csproj", "{561B4BE1-C44D-4F68-B571-7BC1A4368117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06.ReverseAndExclude", "T06.ReverseAndExclude\T06.ReverseAndExclude.csproj", "{12D331B4-CC73-454B-83B6-2022B213F695}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T06.ReverseAndExclude", "T06.ReverseAndExclude\T06.ReverseAndExclude.csproj", "{12D331B4-CC73-454B-83B6-2022B213F695}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07.PredicateForNames", "T07.PredicateForNames\T07.PredicateForNames.csproj", "{54D18158-465E-478A-9330-8ECC2AA1ADF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T07.PredicateForNames", "T07.PredicateForNames\T07.PredicateForNames.csproj", "{54D18158-465E-478A-9330-8ECC2AA1ADF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08.ListOfPredicates", "T08.ListOfPredicates\T08.ListOfPredicates.csproj", "{75B56E9F-1C23-4345-9265-180DB938AC80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T08.ListOfPredicates", "T08.ListOfPredicates\T08.ListOfPredicates.csproj", "{75B56E9F-1C23-4345-9265-180DB938AC80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T09.PredicateParty!", "T09.PredicateParty!\T09.PredicateParty!.csproj", "{576B1803-96F9-4078-8394-931E62F48CF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T09.PredicateParty!", "T09.PredicateParty!\T09.PredicateParty!.csproj", "{576B1803-96F9-4078-8394-931E62F48CF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T10.ThePartyReservationFilterModule", "T10.ThePartyReservationFilterModule\T10.ThePartyReservationFilterModule.csproj", "{6FB69B21-AC9B-4B1D-8090-99E783678DFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T11.TriFunction", "T11.TriFunction\T11.TriFunction.csproj", "{F8F9435E-7C96-42DA-9ECA-F5E30A31EA55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{576B1803-96F9-4078-8394-931E62F48CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{576B1803-96F9-4078-8394-931E62F48CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{576B1803-96F9-4078-8394-931E62F48CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB69B21-AC9B-4B1D-8090-99E783678DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB69B21-AC9B-4B1D-8090-99E783678DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB69B21-AC9B-4B1D-8090-99E783678DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB69B21-AC9B-4B1D-8090-99E783678DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F9435E-7C96-42DA-9ECA-F5E30A31EA55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F9435E-7C96-42DA-9ECA-F5E30A31EA55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F9435E-7C96-42DA-9ECA-F5E30A31EA55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F9435E-7C96-42DA-9ECA-F5E30A31EA55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
