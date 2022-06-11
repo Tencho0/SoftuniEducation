@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace T04.GenericSwapMethodInteger
+﻿namespace T05.GenericCountMethodString
 {
+    using System;
+    using System.Collections.Generic;
+
     public class StartUp
     {
         static void Main(string[] args)
         {
             List<string> list = new List<string>();
+
             int n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++)
             {
                 string cmd = Console.ReadLine();
                 list.Add(cmd);
             }
-
-            var arr = Console.ReadLine()
-                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse)
-                .ToArray();
+            string comparableLine = Console.ReadLine();
             var box = new Box<string>(list);
-            box.Swap(list, arr[0], arr[1]);
-            Console.WriteLine(box);
+            Console.WriteLine(box.CountOfGreaterElements(list, comparableLine));
         }
     }
 }

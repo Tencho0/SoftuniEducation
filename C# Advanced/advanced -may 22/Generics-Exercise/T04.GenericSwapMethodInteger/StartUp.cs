@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace T04.GenericSwapMethodInteger
+﻿namespace T04.GenericSwapMethodInteger
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class StartUp
     {
         static void Main(string[] args)
         {
-            List<string> list = new List<string>();
+            List<int> list = new List<int>();
             int n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++)
             {
-                string cmd = Console.ReadLine();
+                int cmd = int.Parse(Console.ReadLine());
                 list.Add(cmd);
             }
 
@@ -20,7 +20,7 @@ namespace T04.GenericSwapMethodInteger
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
-            var box = new Box<string>(list);
+            var box = new Box<int>(list);
             box.Swap(list, arr[0], arr[1]);
             Console.WriteLine(box);
         }

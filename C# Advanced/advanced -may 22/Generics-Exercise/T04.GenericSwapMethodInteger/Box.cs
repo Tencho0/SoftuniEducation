@@ -1,4 +1,4 @@
-﻿namespace T03.GenericSwapMethodString
+﻿namespace T04.GenericSwapMethodInteger
 {
     using System.Collections.Generic;
     using System.Text;

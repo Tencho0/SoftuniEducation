@@ -1,9 +1,11 @@
-﻿namespace T03.GenericSwapMethodString
+﻿namespace T05.GenericCountMethodString
 {
+    using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
 
-    public class Box<T>
+    public class Box<T> :IComparable<T> where T : IComparable<T>
     {
         public Box(T element)
         {
@@ -14,7 +16,11 @@
             Elements = elements;
         }
         public T Element { get; }
-        public List<T> Elements { get; } 
+        public List<T> Elements { get; }
+
+        public int CompareTo(T other) => Element.CompareTo(other);
+        public int CountOfGreaterElements<T>(List<T> list, T comparableLine) where T : IComparable
+            => list.Count(x => x.CompareTo(comparableLine) > 0);
 
         public void Swap(List<T> list, int firstIndex, int secondIndex)
         {
