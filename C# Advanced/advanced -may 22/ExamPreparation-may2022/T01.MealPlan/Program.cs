@@ -21,51 +21,41 @@ namespace T01.MealPlan
 
             Queue<string> meals = new Queue<string>(givenMeals);
             Stack<int> calories = new Stack<int>(givenCalories);
-            int atenMealsCount = 0;
-            int difference = 0;
-            while (true)
+
+            int atenMeals = 0;
+
+            while (meals.Count > 0 && calories.Count > 0)
             {
-                if (meals.Count == 0 || calories.Count == 0)
-                    break;
-
-                string currMeal = meals.Dequeue();
+                atenMeals++;
+                string meal = meals.Dequeue();
                 int currCalories = calories.Peek();
-                atenMealsCount++;
+                int currMealCalories = ReturnCurrMealCalories(meal);
 
-                int currMealCalories = ReturnCurrMealCalories(currMeal) + difference;
-
-                if (currCalories - currMealCalories > 0)
+                if (currCalories - currMealCalories == 0)
                 {
-                    currCalories -= currMealCalories;
-                    calories.Pop();
-                    calories.Push(currCalories);
-                    difference = 0;
-                }
-                else if (currCalories - currMealCalories == 0)
-                {
-                    difference = 0;
                     calories.Pop();
                 }
                 else if (currCalories - currMealCalories < 0)
                 {
-                    difference = currMealCalories - currCalories;
                     calories.Pop();
-
-                    if (calories.Count == 0)
-                        break;
-
-                    calories.Push(calories.Pop() - difference);
+                    if (calories.Count > 0)
+                    {
+                        calories.Push(calories.Pop() - (currMealCalories - currCalories));
+                    }
+                }
+                else
+                {
+                    calories.Push(calories.Pop() - currMealCalories);
                 }
             }
-
             if (meals.Count == 0)
             {
-                Console.WriteLine($"John had {atenMealsCount} meals.");
+                Console.WriteLine($"John had {atenMeals} meals.");
                 Console.WriteLine($"For the next few days, he can eat {string.Join(", ", calories)} calories.");
             }
             else
             {
-                Console.WriteLine($"John ate enough, he had {atenMealsCount} meals.");
+                Console.WriteLine($"John ate enough, he had {atenMeals} meals.");
                 Console.WriteLine($"Meals left: {string.Join(", ", meals)}.");
             }
         }
