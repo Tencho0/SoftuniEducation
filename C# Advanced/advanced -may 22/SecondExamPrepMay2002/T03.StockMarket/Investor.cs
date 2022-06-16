@@ -52,9 +52,9 @@ namespace StockMarket
           //  if (stock.MarketCapitalization > 10000 && this.MoneyToInvest >= stock.MarketCapitalization)
             if (stock.MarketCapitalization > 10000 && this.MoneyToInvest >= stock.PricePerShare)
             {
-                portfolio[stock.CompanyName] = stock;
                 //this.MoneyToInvest -= stock.MarketCapitalization;
                 this.MoneyToInvest -= stock.PricePerShare;
+                portfolio[stock.CompanyName] = stock;
             }
         }
         public string SellStock(string companyName, decimal sellPrice)
@@ -79,7 +79,7 @@ namespace StockMarket
             if (portfolio.Count == 0)
                 return null;
             decimal max = portfolio.Values.Max(x => x.MarketCapitalization);
-            return portfolio.Values.First(x => x.MarketCapitalization == max);
+            return portfolio.Values.First(x => x.MarketCapitalization >= max);
         }
         public string InvestorInformation()
         {
