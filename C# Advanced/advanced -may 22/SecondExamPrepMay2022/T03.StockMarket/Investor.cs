@@ -62,7 +62,7 @@ namespace StockMarket
             if (!portfolio.ContainsKey(companyName))
                 return $"{companyName} does not exist.";
             if (sellPrice < portfolio[companyName].PricePerShare)
-                Console.WriteLine($"Cannot sell {companyName}.");
+                return $"Cannot sell {companyName}.";
 
             portfolio.Remove(companyName);
             this.MoneyToInvest += sellPrice;
