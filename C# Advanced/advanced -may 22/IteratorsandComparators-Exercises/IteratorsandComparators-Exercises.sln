@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02.Collection", "T02.Colle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.Stack", "T03.Stack\T03.Stack.csproj", "{6681F665-B01D-48F1-8E71-37D5E550D14E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04.Froggy", "T04.Froggy\T04.Froggy.csproj", "{803C7574-1C69-47B7-9C83-A6F9CB0AC091}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04.Froggy", "T04.Froggy\T04.Froggy.csproj", "{803C7574-1C69-47B7-9C83-A6F9CB0AC091}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05.ComparingObjects", "T05.ComparingObjects\T05.ComparingObjects.csproj", "{785D42C3-76EF-4448-9E86-12BCBC2A40A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05.ComparingObjects", "T05.ComparingObjects\T05.ComparingObjects.csproj", "{785D42C3-76EF-4448-9E86-12BCBC2A40A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06.EqualityLogic", "T06.EqualityLogic\T06.EqualityLogic.csproj", "{21C4D4EC-F21A-43E8-9A65-A748A9D34FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07.CustomComparator", "T07.CustomComparator\T07.CustomComparator.csproj", "{72E70F3E-0E8C-4E72-9AEC-5FF5290F3A2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{785D42C3-76EF-4448-9E86-12BCBC2A40A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{785D42C3-76EF-4448-9E86-12BCBC2A40A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{785D42C3-76EF-4448-9E86-12BCBC2A40A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C4D4EC-F21A-43E8-9A65-A748A9D34FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C4D4EC-F21A-43E8-9A65-A748A9D34FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C4D4EC-F21A-43E8-9A65-A748A9D34FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C4D4EC-F21A-43E8-9A65-A748A9D34FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E70F3E-0E8C-4E72-9AEC-5FF5290F3A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E70F3E-0E8C-4E72-9AEC-5FF5290F3A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E70F3E-0E8C-4E72-9AEC-5FF5290F3A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E70F3E-0E8C-4E72-9AEC-5FF5290F3A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
