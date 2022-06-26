@@ -15,6 +15,13 @@ namespace T02.PawnWars
         static int blackPawnCol = 0;
         static void Main(string[] args)
         {
+            FillTheMatrix();
+
+
+        }
+
+        private static void FillTheMatrix()
+        {
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 //char[] currRow = Console.ReadLine().Split().Select(char.Parse).ToArray();
@@ -34,76 +41,76 @@ namespace T02.PawnWars
                     matrix[row, col] = currRow[col];
                 }
             }
-
-            while (true)
-            {
-                string coordinates = coordinates = $"{(char)('a' + 8-whitePawnRow + 1)}{8 - whitePawnCol}";
-                if (IsIndexValid(whitePawnRow - 1, whitePawnCol + 1))
-                {
-                    if (matrix[whitePawnRow - 1, whitePawnCol + 1] == 'b')
-                    {
-                        coordinates = $"{(char)('A' + 8-whitePawnRow)}{8 - whitePawnCol + 1}";
-                        Console.WriteLine($"Game over! White capture on {coordinates}.");
-                        break;
-                    }
-                }
-                if (IsIndexValid(whitePawnRow - 1, whitePawnCol - 1))
-                {
-                    if (matrix[whitePawnRow - 1, whitePawnCol - 1] == 'b')
-                    {
-                        coordinates = $"{(char)('A' + 8-whitePawnRow)}{8 - whitePawnCol - 1}";
-                        Console.WriteLine($"Game over! White capture on {coordinates}.");
-                        break;
-                    }
-                }
-                if (IsIndexValid(whitePawnRow - 1, whitePawnCol))
-                {
-                    matrix[whitePawnRow, whitePawnCol] = '-';
-                    whitePawnRow--;
-                    matrix[whitePawnRow, whitePawnCol] = 'w';
-                }
-                else
-                {
-                    Console.WriteLine($"Game over! White pawn is promoted to a queen at {coordinates}.");
-                    break;
-                }
-
-                coordinates = $"{(char)('A' + 8- blackPawnRow)}{8 - blackPawnCol}";
-                if (IsIndexValid(blackPawnRow + 1, blackPawnCol + 1))
-                {
-                    if (matrix[blackPawnRow + 1, blackPawnCol + 1] == 'w')
-                    {
-                        coordinates = $"{(char)('A' + 8- blackPawnRow + 1)}{8 - blackPawnCol + 1}";
-                        Console.WriteLine($"Game over! Black capture on {coordinates}.");
-                        break;
-                    }
-                }
-                if (IsIndexValid(blackPawnRow + 1, blackPawnCol - 1))
-                {
-                    if (matrix[blackPawnRow + 1, blackPawnCol - 1] == 'b')
-                    {
-                        coordinates = $"{(char)('A' + 8- blackPawnRow + 1)}{8 - blackPawnCol - 1}";
-                        Console.WriteLine($"Game over! Black capture on {coordinates}.");
-                        break;
-                    }
-                }
-                if (IsIndexValid(blackPawnRow + 1, blackPawnCol))
-                {
-                    matrix[blackPawnRow, blackPawnCol] = '-';
-                    blackPawnRow++;
-                    matrix[blackPawnRow, blackPawnCol] = 'w';
-                }
-                else
-                {
-                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {coordinates}.");
-                    break;
-                }
-
-            }
         }
+
         private static bool IsIndexValid(int row, int col)
         {
             return row >= 0 && col >= 0 && row < matrix.GetLength(0) && col < matrix.GetLength(1);
         }
     }
 }
+//while (true)
+//{
+//    string coordinates = coordinates = $"{(char)('a' + 8-whitePawnRow + 1)}{8 - whitePawnCol}";
+//    if (IsIndexValid(whitePawnRow - 1, whitePawnCol + 1))
+//    {
+//        if (matrix[whitePawnRow - 1, whitePawnCol + 1] == 'b')
+//        {
+//            coordinates = $"{(char)('A' + 8-whitePawnRow)}{8 - whitePawnCol + 1}";
+//            Console.WriteLine($"Game over! White capture on {coordinates}.");
+//            break;
+//        }
+//    }
+//    if (IsIndexValid(whitePawnRow - 1, whitePawnCol - 1))
+//    {
+//        if (matrix[whitePawnRow - 1, whitePawnCol - 1] == 'b')
+//        {
+//            coordinates = $"{(char)('A' + 8-whitePawnRow)}{8 - whitePawnCol - 1}";
+//            Console.WriteLine($"Game over! White capture on {coordinates}.");
+//            break;
+//        }
+//    }
+//    if (IsIndexValid(whitePawnRow - 1, whitePawnCol))
+//    {
+//        matrix[whitePawnRow, whitePawnCol] = '-';
+//        whitePawnRow--;
+//        matrix[whitePawnRow, whitePawnCol] = 'w';
+//    }
+//    else
+//    {
+//        Console.WriteLine($"Game over! White pawn is promoted to a queen at {coordinates}.");
+//        break;
+//    }
+
+//    coordinates = $"{(char)('A' + 8- blackPawnRow)}{8 - blackPawnCol}";
+//    if (IsIndexValid(blackPawnRow + 1, blackPawnCol + 1))
+//    {
+//        if (matrix[blackPawnRow + 1, blackPawnCol + 1] == 'w')
+//        {
+//            coordinates = $"{(char)('A' + 8- blackPawnRow + 1)}{8 - blackPawnCol + 1}";
+//            Console.WriteLine($"Game over! Black capture on {coordinates}.");
+//            break;
+//        }
+//    }
+//    if (IsIndexValid(blackPawnRow + 1, blackPawnCol - 1))
+//    {
+//        if (matrix[blackPawnRow + 1, blackPawnCol - 1] == 'b')
+//        {
+//            coordinates = $"{(char)('A' + 8- blackPawnRow + 1)}{8 - blackPawnCol - 1}";
+//            Console.WriteLine($"Game over! Black capture on {coordinates}.");
+//            break;
+//        }
+//    }
+//    if (IsIndexValid(blackPawnRow + 1, blackPawnCol))
+//    {
+//        matrix[blackPawnRow, blackPawnCol] = '-';
+//        blackPawnRow++;
+//        matrix[blackPawnRow, blackPawnCol] = 'w';
+//    }
+//    else
+//    {
+//        Console.WriteLine($"Game over! Black pawn is promoted to a queen at {coordinates}.");
+//        break;
+//    }
+
+//}
