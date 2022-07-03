@@ -6,8 +6,8 @@ namespace Animals
 {
     public class Tomcat : Cat
     {
-        public Tomcat(string type, string name, int age, string gender) 
-            : base(type, name, age, gender)
+        public Tomcat(string name, int age) 
+            : base(name, age, "male")
         {
         }
         public override string ProduceSound()
