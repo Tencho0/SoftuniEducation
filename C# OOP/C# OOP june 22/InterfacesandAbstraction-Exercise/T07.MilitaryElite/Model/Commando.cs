@@ -23,7 +23,7 @@
             sb.AppendLine($"Corps: {this.Corps}");
             sb.AppendLine("Missions:");
             foreach (var mission in this.Missions)
-                sb.AppendLine(mission.ToString());
+                sb.AppendLine($"  {mission}");
 
             return sb.ToString().TrimEnd();
         }

@@ -3,9 +3,9 @@
     using Enums;
     using Contracts;
 
-    public class Missions : IMission
+    public class Mission : IMission
     {
-        public Missions(string codeName, State state)
+        public Mission(string codeName, State state)
         {
             CodeName = codeName;
             State = state;

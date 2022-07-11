@@ -6,10 +6,10 @@
 
     public class LieutenantGeneral : Private
     {
-        public LieutenantGeneral(int id, string firstName, string lastName, decimal salary) 
+        public LieutenantGeneral(int id, string firstName, string lastName, decimal salary, Dictionary<int, IPrivate> privates)
             : base(id, firstName, lastName, salary)
         {
-            Privates = new Dictionary<int, IPrivate>();
+            Privates = privates;
         }
 
         public Dictionary<int, IPrivate> Privates { get; set; }
