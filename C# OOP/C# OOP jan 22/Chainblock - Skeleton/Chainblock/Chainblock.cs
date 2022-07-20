@@ -40,22 +40,47 @@
 
         public IEnumerable<ITransaction> GetAllInAmountRange(double lo, double hi)
         {
-            throw new System.NotImplementedException();
+            List<ITransaction> filteredTransactions = this.transactions.Values
+                .Where(x => x.Amount >= lo && x.Amount <= hi)
+                .OrderByDescending(x => x.Amount)
+                .ThenBy(x => x.Id)
+                .ToList();
+
+            return filteredTransactions;
         }
 
         public IEnumerable<ITransaction> GetAllOrderedByAmountDescendingThenById()
-        {
-            throw new System.NotImplementedException();
-        }
+            => transactions.Values.OrderByDescending(x => x.Amount).ThenBy(x => x.Id).ToList();
 
         public IEnumerable<string> GetAllReceiversWithTransactionStatus(TransactionStatus status)
         {
-            throw new System.NotImplementedException();
+            List<string> sendersNames = transactions.Values
+                  .ToList()
+                  .Where(x => x.Status == status)
+                  .Select(x => x.To)
+                  .ToList();
+            if (sendersNames.Count == 0)
+                throw new InvalidOperationException();
+
+            return sendersNames;
         }
 
         public IEnumerable<string> GetAllSendersWithTransactionStatus(TransactionStatus status)
         {
-            throw new System.NotImplementedException();
+            List<string> sendersNames = transactions.Values
+                .ToList()
+                .Where(x => x.Status == status)
+                .Select(x => x.From)
+                .ToList();
+            // foreach (var (transactionID, currTransaction) in this.transactions)
+            // {
+            //     if (currTransaction.Status == status)
+            //         sendersNames.Add(currTransaction.From);
+            // }
+            if (sendersNames.Count == 0)
+                throw new InvalidOperationException();
+
+            return sendersNames;
         }
 
         public ITransaction GetById(int id)
@@ -65,28 +90,52 @@
 
         public IEnumerable<ITransaction> GetByReceiverAndAmountRange(string receiver, double lo, double hi)
         {
-            throw new System.NotImplementedException();
+            List<ITransaction> filteredTransactions = this.transactions.Values
+                .Where(x => x.To == receiver && x.Amount >= lo && x.Amount < hi)
+                .OrderByDescending(x => x.Amount)
+                .ThenBy(x=> x.Id)
+                .ToList();
+
+            if (filteredTransactions.Count == 0)
+                throw new InvalidOperationException();
+
+            return filteredTransactions;
         }
 
         public IEnumerable<ITransaction> GetByReceiverOrderedByAmountThenById(string receiver)
         {
-            throw new System.NotImplementedException();
+            List<ITransaction> filteredTransactions = this.transactions.Values.Where(x => x.To == receiver).OrderByDescending(x => x.Amount).ThenBy(x=> x.Id).ToList();
+
+            if (filteredTransactions.Count == 0)
+                throw new InvalidOperationException();
+
+            return filteredTransactions;
         }
 
         public IEnumerable<ITransaction> GetBySenderAndMinimumAmountDescending(string sender, double amount)
         {
-            throw new System.NotImplementedException();
+            List<ITransaction> filteredTransactions = this.transactions.Values.Where(x => x.From == sender && x.Amount > amount).OrderByDescending(x => x.Amount).ToList();
+
+            if (filteredTransactions.Count == 0)
+                throw new InvalidOperationException();
+
+            return filteredTransactions;
         }
 
         public IEnumerable<ITransaction> GetBySenderOrderedByAmountDescending(string sender)
         {
-            throw new System.NotImplementedException();
+            List<ITransaction> filteredTransactions = this.transactions.Values.Where(x => x.From == sender).OrderByDescending(x => x.Amount).ToList();
+
+            if (filteredTransactions.Count == 0)
+                throw new InvalidOperationException();
+
+            return filteredTransactions;
         }
 
         public IEnumerable<ITransaction> GetByTransactionStatus(TransactionStatus status)
         {
-        //   if (!this.transactions.Any(x => x.Value.Status == status))
-        //       throw new InvalidOperationException();
+            //   if (!this.transactions.Any(x => x.Value.Status == status))
+            //       throw new InvalidOperationException();
 
             ITransaction[] filteredTransactions = this.transactions.Values
                 .Where(x => x.Status == status)
@@ -101,7 +150,12 @@
 
         public IEnumerable<ITransaction> GetByTransactionStatusAndMaximumAmount(TransactionStatus status, double amount)
         {
-            throw new System.NotImplementedException();
+            List<ITransaction> filteredTransactions = this.transactions.Values
+                .Where(x => x.Status == status && x.Amount <= amount)
+                .OrderByDescending(x=> x.Amount)
+                .ToList();
+
+            return filteredTransactions;
         }
 
         public IEnumerator<ITransaction> GetEnumerator()
