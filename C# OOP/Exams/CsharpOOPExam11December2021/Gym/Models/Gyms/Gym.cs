@@ -13,14 +13,13 @@
     {
         private string name;
         private int capacity;
-        private ICollection<IEquipment> equipment;
-        private ICollection<IAthlete> athletes;
+
         public Gym(string name, int capacity)
         {
             this.Name = name;
             this.Capacity = capacity;
             Equipment = new List<IEquipment>();
-            Athletes= new List<IAthlete>();
+            Athletes = new List<IAthlete>();
         }
         public string Name
         {
@@ -39,16 +38,8 @@
             get { return capacity; }
             private set { capacity = value; }
         }
-        public ICollection<IEquipment> Equipment
-        {
-            get { return equipment; }
-            private set { equipment = value; }
-        }
-        public ICollection<IAthlete> Athletes
-        {
-            get { return athletes; }
-            private set { athletes = value; }
-        }
+        public ICollection<IEquipment> Equipment { get; }
+        public ICollection<IAthlete> Athletes { get; }
         public double EquipmentWeight
         {
             get { return Equipment.Sum(x => x.Weight); }
@@ -80,9 +71,9 @@
 
             sb.AppendLine($"{this.Name} is a {this.GetType().Name}:");
             if (this.Athletes.Count > 0)
-                sb.AppendLine($"Athletes: {string.Join(", ", this.Athletes.Select(x=> x.FullName))}");
+                sb.AppendLine($"Athletes: {string.Join(", ", this.Athletes.Select(x => x.FullName))}");
             else
-                sb.AppendLine("No athletes");
+                sb.AppendLine("Athletes: No athletes");
             sb.AppendLine($"Equipment total count: {this.Equipment.Count}");
             sb.AppendLine($"Equipment total weight: {this.EquipmentWeight:F2} grams");
 

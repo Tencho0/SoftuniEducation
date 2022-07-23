@@ -11,7 +11,7 @@
         private int stamina;
         private int numberOfMedals;
 
-        protected Athlete(string name, string motivation, int numberOfMedals, int stamina)
+        public Athlete(string name, string motivation, int numberOfMedals, int stamina)
         {
             FullName = name;
             Motivation = motivation;
