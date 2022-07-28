@@ -15,10 +15,10 @@ namespace WarCroft.Entities.Characters.Contracts
         public Character(string name, double health, double armor, double abilityPoints, Bag bag)
         {
             this.Name = name;
-            this.Health = health;
             this.BaseHealth = health;
-            this.Armor = armor;
+            this.Health = health;
             this.BaseArmor = armor;
+            this.Armor = armor;
             this.AbilityPoints = abilityPoints;
             this.Bag = bag;
         }
@@ -90,6 +90,8 @@ namespace WarCroft.Entities.Characters.Contracts
             {
                 item.AffectCharacter(this);
             }
+            else
+                throw new InvalidOperationException(ExceptionMessages.AffectedCharacterDead);
         }
         public void TakeDamage(double hitPoints)
         {

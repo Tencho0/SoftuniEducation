@@ -98,7 +98,7 @@ namespace WarCroft.Core
 
             foreach (var character in this.characters.OrderByDescending(x => x.IsAlive).ThenByDescending(x => x.Health))
             {
-                string.Format(SuccessMessages.CharacterStats, character.Name, character.Health, character.BaseHealth, character.Armor, character.BaseArmor, character.IsAlive);
+               sb.AppendLine(string.Format(SuccessMessages.CharacterStats, character.Name, character.Health, character.BaseHealth, character.Armor, character.BaseArmor, character.IsAlive ? "Alive" : "Dead"));
             }
 
             return sb.ToString().TrimEnd();
@@ -122,12 +122,52 @@ namespace WarCroft.Core
                 throw new ArgumentException(string.Format(ExceptionMessages.CharacterNotInParty, receiverName));
             }
 
+            if (!attacker.IsAlive || !receiver.IsAlive) 
+            {
+                throw new InvalidOperationException(ExceptionMessages.AffectedCharacterDead);
+            }
 
+            if (!(attacker is IAttacker))
+            {
+                throw new ArgumentException(ExceptionMessages.AttackFail, attacker.Name);
+            }
+
+            ((IAttacker)attacker).Attack(receiver);
+
+            string result = string.Format(SuccessMessages.AttackCharacter, attacker.Name, receiver.Name, attacker.AbilityPoints, receiver.Name, receiver.Health, receiver.BaseHealth, receiver.Armor, receiver.BaseArmor);
+
+            if (!receiver.IsAlive)
+                result += $"{Environment.NewLine}{string.Format(SuccessMessages.AttackKillsCharacter, receiver.Name)}";
+
+            return result;
         }
 
         public string Heal(string[] args)
         {
-            throw new NotImplementedException();
+            string healerName = args[0];
+            string healingReceiverName = args[1];
+
+            Character healer = this.characters.FirstOrDefault(x => x.Name == healerName);
+            Character healingReceiver = this.characters.FirstOrDefault(x => x.Name == healingReceiverName);
+
+            if (healer == null)
+            {
+                throw new ArgumentException(string.Format(ExceptionMessages.CharacterNotInParty, healerName));
+            }
+
+            if (healingReceiver == null)
+            {
+                throw new ArgumentException(string.Format(ExceptionMessages.CharacterNotInParty, healingReceiverName));
+            }
+
+            if (!(healer is IHealer))
+            {
+                throw new ArgumentException(ExceptionMessages.HealerCannotHeal, healer.Name);
+            }
+
+            ((IHealer)healer).Heal(healingReceiver);
+
+            return string.Format(SuccessMessages.HealCharacter, healer.Name, healingReceiver.Name, healer.AbilityPoints, healingReceiver.Name, healingReceiver.Health);
         }
     }
 }
