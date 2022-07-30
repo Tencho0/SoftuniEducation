@@ -7,6 +7,7 @@ namespace FestivalManager.Tests
     using NUnit.Framework;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     [TestFixture]
     public class StageTests
@@ -109,7 +110,72 @@ namespace FestivalManager.Tests
         [Test]
         public void AddSongToPerformer_ShouldAddSongToThePerformer_ValidData()
         {
+            var performer1 = new Performer("Mitko", "Dimitrow", 21);
+            var performer2 = new Performer("Goshko", "Goshkow", 22);
+            var song = new Song("retro", new TimeSpan(0, 3, 30));
+            var song2 = new Song("nowo retro", new TimeSpan(0, 3, 31));
 
+            stage.AddPerformer(performer1);
+            stage.AddPerformer(performer2);
+            stage.AddSong(song);
+            stage.AddSong(song2);
+
+            var returnedString = stage.AddSongToPerformer(song.Name, performer1.FullName);
+            var returnedString2 = stage.AddSongToPerformer(song2.Name, performer1.FullName);
+            var expectedString = $"{song.Name} ({song.Duration:mm\\:ss}) will be performed by {performer1.FullName}";
+            var expectedString2 = $"{song2.Name} ({song2.Duration:mm\\:ss}) will be performed by {performer1.FullName}";
+
+            var performerSongList = stage.Performers.FirstOrDefault(x => x.FullName == performer1.FullName).SongList;
+            var expectedSongList = new List<Song>()
+            {
+                song,
+                song2
+            };
+
+            Assert.AreEqual(expectedString, returnedString);
+            Assert.AreEqual(expectedString2, returnedString2);
+            CollectionAssert.AreEqual(expectedSongList, performerSongList);
+        }
+        [Test]
+        public void AddSongToPerformer_ShouldThrowException_PerformerDoesNotExists()
+        {
+            Assert.Throws<ArgumentException>(() => stage.AddSongToPerformer("Sonata", "Sasho"), "There is no performer with this name.");
+        }
+        [Test]
+        public void AddSongToPerformer_ShouldThrowException_SongDoesNotExists()
+        {
+            var performer1 = new Performer("Mitko", "Dimitrow", 21);
+            stage.AddPerformer(performer1);
+            Assert.Throws<ArgumentException>(() => stage.AddSongToPerformer("Sonata", "Mitko"), "There is no song with this name.");
+        }
+        [Test]
+        public void PlayMethod_ShouldPlayAllSongs_ValidData()
+        {
+            var performer1 = new Performer("Mitko", "Dimitrow", 21);
+            var performer2 = new Performer("Goshko", "Goshkow", 22);
+            var song = new Song("retro", new TimeSpan(0, 3, 30));
+            var song2 = new Song("nowo retro", new TimeSpan(0, 3, 31));
+            var song3 = new Song("staro retro", new TimeSpan(0, 3, 31));
+            var song4 = new Song("hubawo retro", new TimeSpan(0, 3, 31));
+
+            stage.AddPerformer(performer1);
+            stage.AddPerformer(performer2);
+            stage.AddSong(song);
+            stage.AddSong(song2);
+            stage.AddSong(song3);
+            stage.AddSong(song4);
+
+            stage.AddSongToPerformer(song.Name, performer1.FullName);
+            stage.AddSongToPerformer(song2.Name, performer1.FullName);
+            stage.AddSongToPerformer(song3.Name, performer1.FullName);
+
+            stage.AddSongToPerformer(song3.Name, performer2.FullName);
+            stage.AddSongToPerformer(song4.Name, performer2.FullName);
+
+            var returnedResult = stage.Play();
+            var expectedReuslt = $"{stage.Performers.Count} performers played 5 songs";
+
+            Assert.AreEqual(expectedReuslt, returnedResult);
         }
     }
 }
