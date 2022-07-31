@@ -8,6 +8,12 @@
         private string name;
         private int durability;
 
+        public Weapon(string name, int durability)
+        {
+            this.Name = name;
+            this.Durability = durability;
+        }
+        
         public string Name
         {
             get { return name; }
