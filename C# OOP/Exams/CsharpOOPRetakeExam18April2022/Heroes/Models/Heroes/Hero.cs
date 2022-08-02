@@ -21,7 +21,7 @@
         public string Name
         {
             get { return name; }
-            set
+            private set
             {
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException($"Hero name cannot be null or empty.");
@@ -32,7 +32,7 @@
         public int Health
         {
             get { return health; }
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentException($"Hero health cannot be below 0.");
@@ -43,7 +43,7 @@
         public int Armour
         {
             get { return armour; }
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentException($"Hero armour cannot be below 0.");
@@ -54,7 +54,7 @@
         public IWeapon Weapon
         {
             get { return weapon; }
-            set
+            private set
             {
                 if (value == null)
                     throw new ArgumentException($"Weapon cannot be null.");

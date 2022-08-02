@@ -13,11 +13,11 @@
             this.Name = name;
             this.Durability = durability;
         }
-        
+
         public string Name
         {
             get { return name; }
-            set
+            private set
             {
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException($"Weapon type cannot be null or empty.");
@@ -28,7 +28,7 @@
         public int Durability
         {
             get { return durability; }
-            set
+            protected set
             {
                 if (value < 0)
                     throw new ArgumentException($"Durability cannot be below 0.");

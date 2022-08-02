@@ -6,7 +6,7 @@
     using Heroes.Models.Weapons;
     using Heroes.Repositories.Contracts;
 
-    public class WeaponRepository : IRepository<Weapon>
+    public class WeaponRepository : IRepository<IWeapon>
     {
         private readonly ICollection<IWeapon> models;
 
@@ -15,19 +15,19 @@
             models = new List<IWeapon>();
         }
 
-        public IReadOnlyCollection<Weapon> Models => (IReadOnlyCollection<Weapon>)models;
+        public IReadOnlyCollection<IWeapon> Models => (IReadOnlyCollection<IWeapon>)models;
 
-        public void Add(Weapon model)
+        public void Add(IWeapon model)
         {
             models.Add(model);
         }
 
-        public Weapon FindByName(string name)
+        public IWeapon FindByName(string name)
         {
-            return (Weapon)models.FirstOrDefault(x => (x as Weapon).Name == name);
+            return models.FirstOrDefault(x => x.Name == name);
         }
 
-        public bool Remove(Weapon model)
+        public bool Remove(IWeapon model)
         {
             return models.Remove(model);
         }
