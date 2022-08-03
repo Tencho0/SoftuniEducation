@@ -48,8 +48,8 @@
                 }
                 else
                 {
-                    barbarians.Add(barbarians.ToList()[0]);
-                    barbarians.Remove(barbarians.ToList()[0]);
+                    knights.Add(barbarians.ToList()[0]);
+                    knights.Remove(barbarians.ToList()[0]);
                 }
 
                 if (barbarian.IsAlive)
@@ -59,8 +59,8 @@
                 }
                 else
                 {
-                    knights.Add(barbarians.ToList()[0]);
-                    knights.Remove(barbarians.ToList()[0]);
+                    barbarians.Add(barbarians.ToList()[0]);
+                    barbarians.Remove(barbarians.ToList()[0]);
                 }
 
                 //  barbarians.Enqueue(barbarian);
@@ -72,7 +72,7 @@
 
         private string Result(ICollection<IHero> knights, ICollection<IHero> barbarians)
         {
-            if (!knights.Any(x => x.IsAlive))
+            if (!barbarians.Any(x => x.IsAlive))
                 return $"The knights took {knights.Count(x => !x.IsAlive)} casualties but won the battle.";
 
             return $"The barbarians took {barbarians.Count(x => !x.IsAlive)} casualties but won the battle";

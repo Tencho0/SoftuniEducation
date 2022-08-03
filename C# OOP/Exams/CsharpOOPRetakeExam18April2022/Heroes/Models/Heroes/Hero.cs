@@ -76,12 +76,15 @@
             }
             else if (this.Armour - points < 0)
             {
-                this.Health -= (points - this.Armour);
+                int newHealthValue = this.Health - (points - this.Armour);
+
+                if (newHealthValue < 0)
+                    this.Health = 0;
+                else
+                    this.Health = newHealthValue;
+
                 this.Armour = 0;
             }
-
-            if (this.Health < 0)
-                this.Health = 0;
         }
     }
 }
