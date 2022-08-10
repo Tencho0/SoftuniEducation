@@ -21,7 +21,7 @@
             this.MainWeaponCaliber = mainWeaponCaliber;
             this.Speed = speed;
             this.ArmorThickness = armorThickness;
-            this.Targets = new List<string>();
+            this.targets = new List<string>();
         }
 
         public string Name
@@ -65,11 +65,7 @@
             protected set { speed = value; }
         }
 
-        public ICollection<string> Targets
-        {
-            get { return targets; }
-            private set { targets = value; }
-        }
+        public ICollection<string> Targets => targets;
 
         public void Attack(IVessel target)
         {
@@ -80,13 +76,10 @@
             if (target.ArmorThickness < 0)
                 target.ArmorThickness = 0;
 
-            this.Targets.Add(target.Name);
+            this.targets.Add(target.Name);
         }
 
-        public void RepairVessel()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void RepairVessel();
 
         public override string ToString()
         {

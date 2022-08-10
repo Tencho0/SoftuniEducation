@@ -4,17 +4,17 @@
     using NavalVessels.Utilities.Messages;
     using System;
     using System.Collections.Generic;
+    using System.Text;
 
     public class Captain : ICaptain
     {
         private string fullName;
-        private int combatExperience;
+        private int combatExperience = 0;
         private ICollection<IVessel> vessels;
 
         public Captain(string fullName)
         {
             FullName = fullName;
-            CombatExperience = 0;
             this.vessels = new List<IVessel>();
         }
 
@@ -30,11 +30,7 @@
             }
         }
 
-        public int CombatExperience
-        {
-            get { return combatExperience; }
-            private set { combatExperience = value; }
-        }
+        public int CombatExperience => combatExperience;
 
         public ICollection<IVessel> Vessels => vessels;
 
@@ -48,12 +44,20 @@
 
         public void IncreaseCombatExperience()
         {
-            throw new NotImplementedException();
+            this.combatExperience += 10;
         }
 
         public string Report()
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"{this.FullName} has {this.CombatExperience} combat experience and commands {this.Vessels.Count} vessels.");
+            if (this.Vessels.Count > 0)
+            {
+                foreach (var vessel in this.Vessels)
+                    sb.AppendLine(vessel.ToString());
+            }
+            return sb.ToString().TrimEnd();
         }
     }
 }
