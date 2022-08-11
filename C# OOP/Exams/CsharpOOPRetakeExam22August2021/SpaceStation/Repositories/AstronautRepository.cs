@@ -10,6 +10,11 @@
     {
         private ICollection<IAstronaut> models;
 
+        public AstronautRepository()
+        {
+            models = new List<IAstronaut>();
+        }
+
         public IReadOnlyCollection<IAstronaut> Models => (IReadOnlyCollection<IAstronaut>)models;
 
         public void Add(IAstronaut model)

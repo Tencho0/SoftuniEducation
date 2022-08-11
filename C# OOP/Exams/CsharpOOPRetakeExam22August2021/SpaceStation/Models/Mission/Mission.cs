@@ -17,7 +17,7 @@
                     var item = planet.Items.First();
                     astronaut.Bag.Items.Add(item);
                     astronaut.Breath();
-                    item.Remove(0);
+                    planet.Items.Remove(item);
                     if (!astronaut.CanBreath)
                         break;
                 }

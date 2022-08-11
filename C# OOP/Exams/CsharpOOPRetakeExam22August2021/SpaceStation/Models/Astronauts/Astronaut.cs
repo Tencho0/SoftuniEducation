@@ -1,6 +1,7 @@
 ﻿namespace SpaceStation.Models.Astronauts
 {
     using SpaceStation.Models.Astronauts.Contracts;
+    using SpaceStation.Models.Bags;
     using SpaceStation.Models.Bags.Contracts;
     using SpaceStation.Utilities.Messages;
     using System;
@@ -15,6 +16,7 @@
         {
             Name = name;
             Oxygen = oxygen;
+            bag = new Backpack();
         }
 
         public string Name
