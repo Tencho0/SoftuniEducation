@@ -1,17 +1,16 @@
 function aggregateElements(array){
-    let numbers = array.map(Number);
-    let sum = numbers.reduce((a,b) => a + b);
-    let inverseValues = 0;
-
-    for (let index = 0; index < numbers.length; index++) {
-        inverseValues += 1 / numbers[index];
+    let numbersArray = array.map(Number);
+    let sum = numbersArray.reduce((a, b) => a + b);
+ 
+    let inverseValuesSum = 0;
+ 
+    for (let i = 0; i < numbersArray.length; i++) {
+        inverseValuesSum += 1 / numbersArray[i];
     }
-
-    let concateNums = numbers.Join(' ');
-
+ 
+    let stringConcat = numbersArray.join('');
+ 
     console.log(sum);
-    console.log(inverseValues);
-    console.log(concateNums);
+    console.log(inverseValuesSum);
+    console.log(stringConcat);
 }
-
-aggregateElements(5, 6, 7, 8);
