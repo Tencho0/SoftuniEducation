@@ -19,8 +19,5 @@ function solve(input) {
         }
     }
 
-    console.log(arr);
+    return arr;
 }
-
-solve(6, 3);
-solve(8, 2);
