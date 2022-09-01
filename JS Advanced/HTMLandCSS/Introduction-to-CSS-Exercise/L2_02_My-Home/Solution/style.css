@@ -1,0 +1,24 @@
+body {
+    display: inline-block;
+}
+
+article {
+    display: inline-block;
+    width: 1000px;
+}
+
+p {
+    color: #656565;
+}
+
+img {
+    width: 310px;
+    height: 190px;
+}
+
+h2 {
+    letter-spacing: 8px;
+    border-left: #656565;
+    width: 400px;
+    display: inline-block;
+}

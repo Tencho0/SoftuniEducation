@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    padding: 133px;
+    width: 800px;
+}
+
+section {
+    display: inline-block;
+    height: 301px;
+    padding-top: 96px;
+    padding-bottom: 0px;
+    width: 303px;
+}
+
+section:nth-child(1) {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../Requirements-and-Resources/Images/peak.jpg);
+    background-size: cover;
+    color: white;
+}
+
+section:last-child {
+    border: 2px solid #38082A;
+    border-radius: 5%;
+    padding: 0;
+    padding-bottom: 96px;
+}
+
+label {
+    color: rgb(218, 217, 220);
+}
+
+input {
+    color: rgb(118, 115, 115);
+    border: 2px solid white;
+    border-bottom: 1px solid black;
+}
+
+#submit {
+    background-color: #38082A;
+    color: white;
+    font-family: "Lato", sans-serif;
+}

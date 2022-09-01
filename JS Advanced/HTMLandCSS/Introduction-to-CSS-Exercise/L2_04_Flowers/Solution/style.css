@@ -1,0 +1,87 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background: rgb(214, 116, 114);
+    text-align: center;
+    width: 1520px;
+}
+
+main h1 {
+    padding-top: 200px;
+    font-size: xx-large;
+}
+
+nav {
+    background: white;
+}
+
+hr {
+    width: 60px;
+    height: 2px;
+    color: rgb(214, 116, 114);
+}
+
+main article:last-child hr {
+    color: white;
+}
+
+main section hr {
+    color: rgb(214, 116, 114);
+}
+
+article {
+    color: white;
+}
+
+article:nth-child(1) {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../Requirements-and-Resources/Images/header-flower.png);
+    background-size: cover;
+    height: 900px;
+}
+
+button {
+    background: white;
+    color: rgb(214, 116, 114);
+    padding: 12px;
+    width: 135px;
+    border-radius: 10%;
+    border: 1px solid white;
+}
+
+li {
+    display: inline-block;
+}
+
+nav ul li {
+    color: rgb(214, 116, 114);
+}
+
+ul li:not(:last-child) {
+    padding-right: 20px;
+}
+
+section {
+    background: white;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    font-size: larger;
+}
+
+img {
+    width: 85px;
+}
+
+main section h1 {
+    padding: 42px 5px;
+}
+
+main section ul li {
+    display: inline-block;
+    width: 250px;
+}
+
+footer p {
+    color: white;
+}
