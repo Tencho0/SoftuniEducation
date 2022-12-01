@@ -1,0 +1,20 @@
+{
+  "name": "01.furniture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "isarray": "^0.0.1",
+    "lit-html": "^2.4.0",
+    "page": "^1.11.6",
+    "path-to-regexp": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
