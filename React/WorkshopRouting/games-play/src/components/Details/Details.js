@@ -7,6 +7,10 @@ const Details = ({ games, addComment }) => {
         username: '',
         comment: ''
     });
+    const [error, setError] = useState({
+        username: '',
+        comment: ''
+    });
     // Better is to use server data
     const { gameId } = useParams();
     const game = games.find(x => x._id == gameId);
@@ -22,6 +26,22 @@ const Details = ({ games, addComment }) => {
             [e.target.name]: e.target.value
         }));
     };
+
+    const validateUsername = (e) => {
+        const username = e.target.value;
+        let errorMessage = '';
+
+        if (username.length < 4) {
+            errorMessage = 'Username must be longer than 4 characters!';
+        } else if (username.length > 10) {
+            errorMessage = 'Username must be shorter than 10 characters!';
+        }
+
+        setError(state => ({
+            ...state,
+            username: errorMessage
+        }))
+    }
 
     return (
         <section id="game-details">
@@ -69,7 +89,13 @@ const Details = ({ games, addComment }) => {
                         placeholder="John Doe"
                         onChange={onChange}
                         value={comment.username}
+                        onBlur={validateUsername}
                     />
+
+                    {error.username &&
+                        <div style={{ color: 'red' }}>{error.username}</div>
+                    }
+
                     <textarea
                         name="comment"
                         placeholder="Comment......"

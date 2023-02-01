@@ -5,12 +5,12 @@ import uniqid from 'uniqid'
 import Header from './components/Header/Header';
 import Home from './components/Home'
 import Login from './components/Login/Login';
-import * as gameService from './services/gameService'
 import Register from './components/Register/Register';
 import Create from './components/Create/Create';
 import Catalog from './components/Catalog/Catalog';
-import './App.css';
 import Details from './components/Details/Details';
+import * as gameService from './services/gameService'
+import './App.css';
 
 function App() {
     const [games, setGames] = useState([]);
