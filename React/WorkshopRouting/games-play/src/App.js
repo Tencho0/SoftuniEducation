@@ -9,33 +9,49 @@ import Register from './components/Register/Register';
 import Create from './components/Create/Create';
 import Catalog from './components/Catalog/Catalog';
 import './App.css';
+import Details from './components/Details/Details';
 
 function App() {
-  const [games, setGames] = useState([]);
-  useEffect(() => {
-    gameService.getAll()
-      .then(result => {
-        setGames(result);
-      })
-  }, []);
+    const [games, setGames] = useState([]);
+
+    const addComment = (gameId, comment) => {
+        setGames(state => {
+            const game = state.find(x => x._id == gameId);
+            const comments = game.comments || [];
+            comments.push(comment);
+
+            return [
+                ...state.filter(x => x._id !== gameId),
+                { ...game, comments }
+            ]
+        })
+    }
+
+    useEffect(() => {
+        gameService.getAll()
+            .then(result => {
+                setGames(result);
+            })
+    }, []);
 
 
-  return (
-    <div id="box">
-      <Header />
+    return (
+        <div id="box">
+            <Header />
 
-      <main id="main-content">
-        <Routes>
-          <Route path="/" element={<Home games={games} />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/catalog" element={<Catalog games={games} />} />
-        </Routes>
-      </main>
+            <main id="main-content">
+                <Routes>
+                    <Route path="/" element={<Home games={games} />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/create" element={<Create />} />
+                    <Route path="/catalog" element={<Catalog games={games} />} />
+                    <Route path="/catalog/:gameId" element={<Details games={games} addComment={addComment} />} />
+                </Routes>
+            </main>
 
-      {/* Edit Page ( Only for the creator )*/}
-      {/* <section id="edit-page" className="auth">
+            {/* Edit Page ( Only for the creator )*/}
+            {/* <section id="edit-page" className="auth">
         <form id="edit">
           <div className="container">
             <h1>Edit Game</h1>
@@ -59,63 +75,8 @@ function App() {
           </div>
         </form>
       </section> */}
-
-      {/*Details Page*/}
-      {/* <section id="game-details">
-        <h1>Game Details</h1>
-        <div className="info-section">
-          <div className="game-header">
-            <img className="game-img" src="images/MineCraft.png" />
-            <h1>Bright</h1>
-            <span className="levels">MaxLevel: 4</span>
-            <p className="type">Action, Crime, Fantasy</p>
-          </div>
-          <p className="text">
-            Set in a world where fantasy creatures live side by side with humans. A
-            human cop is forced to work with an Orc to find a weapon everyone is
-            prepared to kill for. Set in a world where fantasy creatures live side
-            by side with humans. A human cop is forced to work with an Orc to find a
-            weapon everyone is prepared to kill for.
-          </p>
-          <div className="details-comments">
-            <h2>Comments:</h2>
-            <ul>
-              <li className="comment">
-                <p>Content: I rate this one quite highly.</p>
-              </li>
-              <li className="comment">
-                <p>Content: The best game.</p>
-              </li>
-            </ul>
-            <p className="no-comment">No comments.</p>
-          </div>
-          <div className="buttons">
-            <a href="#" className="button">
-              Edit
-            </a>
-            <a href="#" className="button">
-              Delete
-            </a>
-          </div>
         </div>
-        <article className="create-comment">
-          <label>Add new comment:</label>
-          <form className="form">
-            <textarea
-              name="comment"
-              placeholder="Comment......"
-              defaultValue={""}
-            />
-            <input
-              className="btn submit"
-              type="submit"
-              defaultValue="Add Comment"
-            />
-          </form>
-        </article>
-      </section> */}
-    </div>
-  );
+    );
 };
 
 export default App;
