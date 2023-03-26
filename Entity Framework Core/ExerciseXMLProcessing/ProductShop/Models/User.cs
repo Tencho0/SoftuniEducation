@@ -6,8 +6,8 @@
     {
         public User()
         {
-            this.ProductsSold = new List<Product>();
-            this.ProductsBought = new List<Product>();
+            this.ProductsSold = new HashSet<Product>();
+            this.ProductsBought = new HashSet<Product>();
         }
 
         public int Id { get; set; }
@@ -18,7 +18,7 @@
 
         public int? Age { get; set; }
 
-        public ICollection<Product> ProductsSold { get; set; } = null!;
-        public ICollection<Product> ProductsBought { get; set; } = null!;
+        public virtual ICollection<Product> ProductsSold { get; set; } = null!;
+        public virtual ICollection<Product> ProductsBought { get; set; } = null!;
     }
 }
