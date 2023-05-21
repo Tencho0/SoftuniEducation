@@ -1,0 +1,57 @@
+/* Header */
+
+header {
+    width: 100%;
+    background-color: #f38181;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container nav ul {
+    display: flex;
+}
+
+.nav-container nav ul {
+    margin: 40px;
+}
+
+.nav-container nav ul a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Services section */
+
+.services {
+    margin-top: 50px;
+}
+
+.service {
+    display: flex;
+    width: 33%;
+}
+
+.service .service-info .service-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.service .service-info .service-description {
+    font-size: 15px;
+    color: #999;
+    margin-top: 10px;
+    line-height: 1.6;
+}
