@@ -33,8 +33,12 @@ header {
 
 /* Services section */
 
-.services {
+#services {
     margin-top: 50px;
+}
+
+.services-row {
+    display: flex;
 }
 
 .service {
