@@ -1,8 +1,7 @@
-﻿namespace Forum_App.Data.Models
+﻿namespace Forum.Data.Models
 {
     using System.ComponentModel.DataAnnotations;
-
-    using static Forum_App.Common.EntityValidation.Post;
+    using static Forum.Common.Validations.EntityValidation.Post;
 
     public class Post
     {

@@ -1,8 +1,8 @@
 ﻿namespace Forum_App.Controllers
 {
     using System.Diagnostics;
-    using Forum_App.Models;
     using Microsoft.AspNetCore.Mvc;
+    using Forum.ViewModels;
 
     public class HomeController : Controller
     {

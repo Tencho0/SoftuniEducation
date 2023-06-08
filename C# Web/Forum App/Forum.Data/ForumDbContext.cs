@@ -1,7 +1,8 @@
-﻿namespace Forum_App.Data
+﻿namespace Forum.Data
 {
-    using Forum_App.Data.Models;
     using Microsoft.EntityFrameworkCore;
+    using Configuration;
+    using Models;
 
     public class ForumDbContext : DbContext
     {
@@ -13,6 +14,8 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new PostEntityConfiguration());
+
             base.OnModelCreating(modelBuilder);
         }
     }
