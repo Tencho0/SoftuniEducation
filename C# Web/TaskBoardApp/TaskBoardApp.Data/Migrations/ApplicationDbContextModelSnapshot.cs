@@ -8,7 +8,7 @@ namespace TaskBoardApp.Data.Migrations
     using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
     using TaskBoardApp.Data;
 
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(TaskBoardDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -9,7 +9,7 @@ namespace TaskBoardApp.Data.Migrations
     using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
     using TaskBoardApp.Data;
 
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(TaskBoardDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
