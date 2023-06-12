@@ -27,16 +27,15 @@ namespace TaskBoardApp.Data.Models
         public string Description { get; set; } = null!;
 
         public DateTime CreatedOn { get; set; }
-
-        [ForeignKey(nameof(Board))]
+        
         public int BoardId { get; set; }
 
-        public virtual Board Board { get; set; }
+        public virtual Board Board { get; set; } = null!;
 
         [Required]
         [ForeignKey(nameof(Owner))]
         public string OwnerId { get; set; } = null!;
 
-        public virtual IdentityUser Owner { get; set; }
+        public virtual IdentityUser Owner { get; set; } = null!;
     }
 }
