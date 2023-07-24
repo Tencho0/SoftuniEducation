@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WynShopTechInterview", "WynShopTechInterview.csproj", "{BD9D928F-44E5-4B8B-B441-68DDB6FAD852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountTags", "..\DiscountTags\DiscountTags.csproj", "{F7D54C3D-0C84-48DE-8506-DC2C6101A675}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD9D928F-44E5-4B8B-B441-68DDB6FAD852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD9D928F-44E5-4B8B-B441-68DDB6FAD852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD9D928F-44E5-4B8B-B441-68DDB6FAD852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD9D928F-44E5-4B8B-B441-68DDB6FAD852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7D54C3D-0C84-48DE-8506-DC2C6101A675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7D54C3D-0C84-48DE-8506-DC2C6101A675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7D54C3D-0C84-48DE-8506-DC2C6101A675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7D54C3D-0C84-48DE-8506-DC2C6101A675}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40908C63-4E9E-4EAE-8615-D99D7DFE55F9}
+	EndGlobalSection
+EndGlobal
