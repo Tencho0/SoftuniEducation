@@ -17,12 +17,13 @@ I would like to express my deepest gratitude to [Software University](https://so
 | [MSSQL](https://github.com/Tencho0/SoftuniEducation/tree/main/MSSQL) | [Certificate](https://softuni.bg/users/profile/certificates?username=Ten4o1011) |
 | [JS Advanced](https://github.com/Tencho0/SoftuniEducation/tree/main/JS%20Advanced) | [Certificate](https://softuni.bg/users/profile/certificates?username=Ten4o1011) |
 | [JS Applications](https://github.com/Tencho0/SoftuniEducation/tree/main/JS%20Applications%20-%20Nov2022) | [Certificate](https://softuni.bg/users/profile/certificates?username=Ten4o1011) |
-| [ASP.NET Fundamentals](https://github.com/Tencho0/SoftuniEducation/tree/main/React) | [Certificate](https://softuni.bg/certificates/details/175357/616ff1b4) |
+| [ASP.NET Fundamentals](https://github.com/Tencho0/SoftuniEducation/tree/main/C%23%20Web) | [Certificate](https://softuni.bg/certificates/details/182184/95db7df0) |
+| [ASP.NET Advanced](https://github.com/Tencho0/CarRentingSystem) | [Certificate](https://softuni.bg/certificates/details/175357/616ff1b4) |
 | [React](https://github.com/Tencho0/SoftuniEducation/tree/main/React) | `404 Not Found` |
 | [Softuniada](https://github.com/Tencho0/SoftuniEducation/tree/main/Softuniada) | `404 Not Found` |
 | [C# Data Structures Fundamentals](https://github.com/Tencho0/SoftuniEducation/tree/main/C%23%20Data%20Structures%20Fundamentals/Recursion) | `404 Not Found` |
 | [Algorithms Fundamentals with C#](https://github.com/Tencho0/SoftuniEducation/tree/main/C%23%20Algorithms-Fundamentals) | [Certificate](https://softuni.bg/certificates/details/176654/18c20c61) |
-| [Algorithms Advanced with C#] | - |
+| [Algorithms Advanced with C#](https://github.com/Tencho0/SoftuniEducation/tree/main/C%23%20Algorithms-Advanced) | [Certificate](https://softuni.bg/certificates/details/184510/3c0bb835) |
 
 ## Contributing Guidelines
 
